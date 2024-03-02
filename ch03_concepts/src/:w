@@ -1,0 +1,90 @@
+fn main() {
+    // In this file, there will be pairs of slightly differnt lines;
+    // uncomment one or the other to see the effect
+    // 3.1 Variables and Mutability
+    // By default, "variables" are immutable
+    // let x = 5;
+    let mut x = 5;
+    println!("The value of x is: {x}");
+    x = 6;
+    println!("The value of x is: {x}");
+
+    // Constants
+    //  -- Always immutable
+    //  -- Possible in global scope
+    //  -- Require type annotation
+    //  -- Value must be knowable at compile time
+    //  -- Conventionally, names are UPPER_SNAKE_CASE
+    const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+    // This line prevents unused warning
+    println!("Seconds in three hours: {THREE_HOURS_IN_SECONDS}");
+
+
+    // Shadowing
+    let x = 5;
+
+    // This 'x' is actually a different 'x'; the first is now unavailable
+    let x = x + 1;
+
+    {
+        // This shadows the outer block's 'x'
+        let x = x * 2;
+        println!("The value of x in the inner scope is: {x}");
+    }
+
+    // The inner block's 'x' is no longer in scope
+    println!("The value of x is: {x}");
+
+    // 3.2 Data Types
+    let num_decimal : u32 = 98_222;
+    let num_hex : u8 = 0xff;
+    let num_oct : u8 = 0o77;
+    let num_bin : u8 = 0b1111_0000;
+    let num_byte : u8 = b'A';
+    println!("Numbers: {num_decimal}, {num_hex}, {num_oct}, {num_bin}, {num_byte}");
+
+    // Floats
+    let x = 2.0;      // f64 by default
+    let y: f32 = 3.0; // f32
+    println!("{x}, {y}");
+
+    // Numeric operations are not novel. Questions? See
+    // https://rust-book.cs.brown.edu/ch03-02-data-types.html#numeric-operations
+
+    // Booleans
+    let t = true;
+    let f: bool = false; // with explicit type annotation
+    println!("{t}, {f}");
+
+    // Char
+    let z : char = 'z';
+
+    // Emojis just work
+    let heart_eyed_cat = '😻';
+    println! ("{z}  {heart_eyed_cat}");
+
+    // Tuples
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    let (a, b, c) = tup;
+    println!("1. tup = {a}, {b}, {c}");
+    let a = tup.0;
+    let b = tup.1;
+    let c = tup.2;
+    println!("2. tup = {a}, {b}, {c}");
+    // Cannot use . notation in println!()
+    // println!("tup = {tup.0}, {b}, {c}");
+
+
+    // Arrays
+    let a = [1, 2, 3, 4, 5];
+    // special type annotation for array size
+    //let a: [i32; 5] = [1, 2, 3, 4, 5];
+    let five_threes = [3;5];
+    // println! chokes on arrays
+    // println!("{a}, {five_threes}");
+    // println!("{a[0]}, {five_threes[4]}");
+    let first_a = a[0];
+    let last_3 = five_threes[4];
+    println!("{first_a}, {last_3}");
+
+}
