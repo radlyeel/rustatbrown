@@ -1,0 +1,42 @@
+Folllowing along with The Bok, Brown University's interactive version at
+https://rust-book.cs.brown.edu/title-page.html
+
+
+You Folllowing along with The Bok, Brown University's interactive version at
+You Are Here:
+https://rust-book.cs.brown.edu/ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-result
+
+My version: rustc 1.86.0 (05f9846f8 2025-03-31)
+
+MacBook Air
+        M2 chip, 16GB
+        MacOS 15.3.2
+        
+VS Code v.1.99.o, extension 
+        Identifier
+        rust-lang.rust-analyzer
+        Version
+        0.3.2362
+        Last Updated
+        2025-04-02, 10:41:58
+        Size
+        44.59MB
+
+Note that this is the fixnumth (https://ds26gte.github.io/tyscheme/)time I've started 
+down this path, but maybe this time I'll reach the tippng point.
+
+I will be going slower, manually typing in all the code for two reasons:
+  - copy/paste only verifies that my toolchain is working.
+  - this is not a race.  As I learned from my nephew James, it's about the journey,
+    not the destination.
+
+One side effect is that the look-and-feel (including comments, variable names, and whitespace)
+space will differ from The Book.
+
+I will be skipping the Hello World section; this being my fixnumth time, that would
+not be time well spent.
+
+Note that in VSCode, When the editor is in main.rs, a Run arrow icon appears just above
+'fn main()'that appears to be almost like 'cargo run'
+
+VSCode does not seem to auto-indent.
