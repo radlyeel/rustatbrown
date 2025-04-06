@@ -40,3 +40,14 @@ Note that in VSCode, When the editor is in main.rs, a Run arrow icon appears jus
 'fn main()'that appears to be almost like 'cargo run'
 
 VSCode does not seem to auto-indent.
+SemVer: Semantic Versioning --
+  Example: 0.8.5 means any version that is at least 0.8.5 but below 0.9.0
+  Productivity tip: after adding dependencies, run cargo build.
+  TODO:  Re-read the sections
+     Ensuring Reproducible Builds with the Cargo.lock File
+   and
+     Updating a Crate to Get a New Version
+   to grok Rust's version control processing
+
+cargo doc --open
+to build and launch a browser on documentation needed by this crate.
